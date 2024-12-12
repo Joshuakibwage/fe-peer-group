@@ -15,17 +15,20 @@ const Navbar = () => {
   return (
     <nav>
         <div className="flex items-center justify-between px-4 py-4">
-            <div>
+            <div className="sm:hidden">
                 <h1 className="text-3xl font-bold font-sans">INSURE</h1>
             </div>
             {/* desktop and tablet view */}
-            <div>
-                <ul>
+            <div className="sm:flex items-center gap-4 hidden">
+                <div>
+                    <h1 className="text-3xl font-bold font-sans">INSURE</h1>
+                </div>
+                <ul className="md:flex hidden gap-3">
                     <li>HOW WE WORK</li>
                     <li>BLOG</li>
                     <li>ACCOUNT</li>
-                    <li></li>
                 </ul>
+                <button className="border-2 border-black rounded px-3 py-1">VIEW PLANS</button>
             </div>
             {/* mobile view */}
             <div onClick={toggleMenu} className="sm:hidden ">
